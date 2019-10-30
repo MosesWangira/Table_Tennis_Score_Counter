@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/ittf_website"
+        android:title="ITTF website"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/developer"
+        android:title="Developer"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/exitApp"
+        android:title="Exit Counter"
+        app:showAsAction="never"/>
+
+</menu>
