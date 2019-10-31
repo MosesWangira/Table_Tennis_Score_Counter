@@ -69,8 +69,15 @@ public class Tabletennis extends AppCompatActivity {
         });
         /********************************************************************************/
 
-        //service
-        if (scorePlayer2 == 0 && scorePlayer1 == 0){
+        //service update code
+        String score_p1 = player_one_text_score.getText().toString().trim();
+        String score_p2 = player_one_text_score.getText().toString().trim();
+
+        //conversion of string to integer
+        int score_1_int = Integer.valueOf(score_p1);
+        int score_2_int = Integer.valueOf(score_p2);
+
+        if (score_1_int == 0 && score_2_int == 0){
             player_one_service.setVisibility(View.INVISIBLE);
             player_two_service.setVisibility(View.INVISIBLE);
 
