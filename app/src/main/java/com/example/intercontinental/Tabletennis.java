@@ -21,10 +21,23 @@ public class Tabletennis extends AppCompatActivity {
     int set_set_win_p1 = 0;
     int set_set_win_p2 = 0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabletennis);
+
+        Button player_one_score = findViewById(R.id.player_one_add);
+        Button player_one_fault = findViewById(R.id.player_one_fault);
+        final Button player_two_score = findViewById(R.id.player_two_add);
+        Button player_two_fault = findViewById(R.id.player_two_fault);
+
+        final TextView player_one_text_score = findViewById(R.id.player_one_score);
+        final TextView player_two_text_score = findViewById(R.id.player_two_score);
+
+        final TextView player_one_service = findViewById(R.id.service_player_one);
+        final TextView player_two_service = findViewById(R.id.service_player_two);
 
         Button add_best = findViewById(R.id.add_best_of);
         add_best.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +67,32 @@ public class Tabletennis extends AppCompatActivity {
                 }
             }
         });
+        /********************************************************************************/
 
-        final Button player_one_score = findViewById(R.id.player_one_add);
+        //service
+        if (scorePlayer2 == 0 && scorePlayer1 == 0){
+            player_one_service.setVisibility(View.INVISIBLE);
+            player_two_service.setVisibility(View.INVISIBLE);
+
+        }
+        player_one_text_score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player_one_service.setVisibility(View.VISIBLE);
+                player_two_service.setVisibility(View.INVISIBLE);
+            }
+        });
+        player_two_text_score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                player_one_service.setVisibility(View.INVISIBLE);
+                player_two_service.setVisibility(View.VISIBLE);
+            }
+        });
+
+        /********************************************************************************/
+
+
         player_one_score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +123,6 @@ public class Tabletennis extends AppCompatActivity {
             }
         });
 
-        Button player_one_fault = findViewById(R.id.player_one_fault);
         player_one_fault.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +137,7 @@ public class Tabletennis extends AppCompatActivity {
                 }
             }
         });
-        final Button player_two_score = findViewById(R.id.player_two_add);
+
         player_two_score.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +167,6 @@ public class Tabletennis extends AppCompatActivity {
             }
         });
 
-        Button player_two_fault = findViewById(R.id.player_two_fault);
         player_two_fault.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,7 +192,6 @@ public class Tabletennis extends AppCompatActivity {
         });
 
 
-
     }
 
     //check for game point
@@ -170,7 +204,7 @@ public class Tabletennis extends AppCompatActivity {
             Toast.makeText(Tabletennis.this, "Game point", Toast.LENGTH_SHORT).show();
         }
         if (scorePlayer1 == 11 && scorePlayer2 <= 9) {
-            Toast.makeText(this, " "+player_name_one+" wins", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " " + player_name_one + " wins", Toast.LENGTH_SHORT).show();
             set_set_win_p1 = set_set_win_p1 + 1;
             display_setwin_player_one(set_set_win_p1);
             reset_score();
@@ -179,7 +213,7 @@ public class Tabletennis extends AppCompatActivity {
             Toast.makeText(this, "Advantage player one", Toast.LENGTH_SHORT).show();
         }
         if (scorePlayer1 >= 10 && scorePlayer2 == scorePlayer1 - 2) {
-            Toast.makeText(this, " "+player_name_one+" wins", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " " + player_name_one + " wins", Toast.LENGTH_SHORT).show();
             set_set_win_p1 = set_set_win_p1 + 1;
             display_setwin_player_one(set_set_win_p1);
             reset_score();
@@ -198,7 +232,7 @@ public class Tabletennis extends AppCompatActivity {
             Toast.makeText(Tabletennis.this, "Game point", Toast.LENGTH_SHORT).show();
         }
         if (scorePlayer2 == 11 && scorePlayer1 <= 9) {
-            Toast.makeText(this, " "+player_name_two+" wins", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " " + player_name_two + " wins", Toast.LENGTH_SHORT).show();
             set_set_win_p2 = set_set_win_p2 + 1;
             display_setwin_player_two(set_set_win_p2);
             reset_score();
@@ -210,12 +244,13 @@ public class Tabletennis extends AppCompatActivity {
             Toast.makeText(this, "Dues", Toast.LENGTH_SHORT).show();
         }
         if (scorePlayer2 > 10 && scorePlayer1 == scorePlayer2 - 2) {
-            Toast.makeText(this, " "+player_name_two+" wins", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " " + player_name_two + " wins", Toast.LENGTH_SHORT).show();
             set_set_win_p2 = set_set_win_p2 + 1;
             display_setwin_player_two(set_set_win_p2);
             reset_score();
         }
     }
+
     private void reset_score() {
         resetScoreOne(scorePlayer1 = 0);
         resetScoreTwo(scorePlayer2 = 0);
@@ -303,7 +338,7 @@ public class Tabletennis extends AppCompatActivity {
                 return true;
             case R.id.about:
                 Intent about = new Intent(Tabletennis.this, About.class);
-                if(about.resolveActivity(getPackageManager()) != null){
+                if (about.resolveActivity(getPackageManager()) != null) {
                     startActivity(about);
                 }
                 return true;

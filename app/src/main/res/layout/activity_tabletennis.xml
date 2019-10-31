@@ -139,12 +139,14 @@
                     android:textColor="#FFFFFF" />
 
                 <TextView
+                    android:id="@+id/service_player_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="service"
+                    android:textStyle="bold"
                     android:textColor="#ffffff"
                     android:gravity="center_horizontal"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/player_one_score"
@@ -209,12 +211,14 @@
                     android:textColor="#FFFFFF" />
 
                 <TextView
+                    android:id="@+id/service_player_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="service"
+                    android:textStyle="bold"
                     android:gravity="center_horizontal"
                     android:textColor="#ffffff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/player_two_score"
