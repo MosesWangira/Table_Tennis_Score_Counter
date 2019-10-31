@@ -1,4 +1,10 @@
+
 package com.example.intercontinental;
+
+
+/**
+ * code written by moses ouma wangira
+ **/
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
