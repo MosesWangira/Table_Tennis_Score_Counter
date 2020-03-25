@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg1">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -29,8 +30,9 @@
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/button_background"
                     android:gravity="center"
-                    android:text="NEW MATCH"
-                    android:textColor="#FFFFFF" />
+                    android:text="new match"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -43,8 +45,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="BEST OF "
-                        android:textColor="#ffffff"
+                        android:text="Best of"
+                        android:layout_marginRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -54,7 +58,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/button_background"
                         android:text="-"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/set_match"
@@ -63,7 +67,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:text="1"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -73,7 +77,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/button_background"
                         android:text="+"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -85,7 +89,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="SETS WON"
-                android:textColor="#ffffff"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -109,24 +113,25 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/pl1name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_margin="10dp"
                     android:alpha="0.9"
-                    android:gravity="center_horizontal"
+                    android:background="@drawable/editext_background"
+                    android:gravity="center"
                     android:hint="player One Name "
                     android:inputType="textCapWords"
                     android:maxLength="8"
                     android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textColorHint="#ffffff"
-                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <Button
@@ -136,6 +141,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/button_background"
                     android:text="score"
+                    android:textAllCaps="false"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -144,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:text="service"
                     android:textStyle="bold"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:gravity="center_horizontal"
                     android:textSize="14sp" />
 
@@ -155,7 +161,7 @@
                     android:layout_margin="10dp"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="100sp"
                     android:textStyle="bold" />
 
@@ -166,6 +172,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/button_background"
                     android:text="fault"
+                    android:textAllCaps="false"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
@@ -181,24 +188,25 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/p2name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_margin="10dp"
                     android:alpha="0.9"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:hint="player Two name"
+                    android:background="@drawable/editext_background"
                     android:inputType="textCapWords"
                     android:maxLength="8"
                     android:textAllCaps="true"
-                    android:textColor="#ffffff"
-                    android:textColorHint="#ffffff"
-                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <Button
@@ -208,7 +216,8 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/button_background"
                     android:text="score"
-                    android:textColor="#FFFFFF" />
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/service_player_two"
@@ -217,7 +226,7 @@
                     android:text="service"
                     android:textStyle="bold"
                     android:gravity="center_horizontal"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <TextView
@@ -227,7 +236,7 @@
                     android:layout_margin="10dp"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="100sp"
                     android:textStyle="bold" />
 
@@ -238,6 +247,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/button_background"
                     android:text="fault"
+                    android:textAllCaps="false"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </LinearLayout>
