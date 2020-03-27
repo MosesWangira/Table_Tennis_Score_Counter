@@ -39,8 +39,6 @@ public class Tabletennis extends AppCompatActivity {
         final TextView player_one_text_score = findViewById(R.id.player_one_score);
         final TextView player_two_text_score = findViewById(R.id.player_two_score);
 
-        final TextView player_one_service = findViewById(R.id.service_player_one);
-        final TextView player_two_service = findViewById(R.id.service_player_two);
 
         Button add_best = findViewById(R.id.add_best_of);
         add_best.setOnClickListener(new View.OnClickListener() {
@@ -80,25 +78,6 @@ public class Tabletennis extends AppCompatActivity {
         int score_1_int = Integer.valueOf(score_p1);
         int score_2_int = Integer.valueOf(score_p2);
 
-        if (score_1_int == 0 && score_2_int == 0){
-            player_one_service.setVisibility(View.INVISIBLE);
-            player_two_service.setVisibility(View.INVISIBLE);
-
-        }
-        player_one_text_score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player_one_service.setVisibility(View.VISIBLE);
-                player_two_service.setVisibility(View.INVISIBLE);
-            }
-        });
-        player_two_text_score.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                player_one_service.setVisibility(View.INVISIBLE);
-                player_two_service.setVisibility(View.VISIBLE);
-            }
-        });
 
         /********************************************************************************/
 

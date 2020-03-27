@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Table Tennis Scores</string>
+    <string name="service">service</string>
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +49,7 @@
                         android:text="Best of"
                         android:layout_marginRight="10dp"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -67,7 +68,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:text="1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -89,9 +90,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="SETS WON"
-                android:textColor="@color/black"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:fontFamily="@font/delius" />
 
 
         </LinearLayout>
@@ -113,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -144,15 +146,6 @@
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:id="@+id/service_player_one"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="service"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:gravity="center_horizontal"
-                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/player_one_score"
@@ -161,8 +154,8 @@
                     android:layout_margin="10dp"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/black"
-                    android:textSize="100sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="150sp"
                     android:textStyle="bold" />
 
                 <Button
@@ -188,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -219,15 +212,6 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/service_player_two"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="service"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/player_two_score"
@@ -236,8 +220,8 @@
                     android:layout_margin="10dp"
                     android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/black"
-                    android:textSize="100sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="150sp"
                     android:textStyle="bold" />
 
                 <Button
